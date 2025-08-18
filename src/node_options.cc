@@ -505,6 +505,11 @@ EnvironmentOptionsParser::EnvironmentOptionsParser() {
             &EnvironmentOptions::experimental_sqlite,
             kAllowedInEnvvar,
             true);
+  AddOption("--experimental-nosql",
+            "experimental node:nosql module",
+            &EnvironmentOptions::experimental_nosql,
+            kAllowedInEnvvar,
+            true);  
   AddOption("--experimental-quic",
             "" /* undocumented until its development */,
 #ifdef NODE_OPENSSL_HAS_QUIC
